@@ -1,10 +1,33 @@
 /*Typography*/
-
+/*IMPORTANT LINK "https://github.com/gitdagray/css_course" a*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 body{
   padding:25%;
   font-size:2rem;
+  /*font family*/
+  /*Serif, Sans-serif, monospace(evenspace for every character),cursive, fantasy */
+  /* font with space needs quotes*/
+  /*a list of fonts like this "'Courier New', Courier, monospace" is called a font stack*/
+  font-family: "Roboto", sans-serif;
+
 }
 input, button{
   /*Becuase input and button don't automacticly inherit the font-size changes from body we need to tell css to inherit from the parent element*/
   font-size:inherit;
+}
+/*Text settings that don't effect the font or text size*/
+p{
+  /*text decloration, text-transform,text-align,text-indent*/
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: justify;
+  text-indent: 2em;
+  /*Accepts units or number may help with readability*/
+  line-height:1.4;
+  /*Following not really for readabilty more more effect*/
+  letter-spacing: .05em;
+  word-spacing: .1em;
+  /*font*/
+  font-weight: 200;
+  font-style: italic;
 }
