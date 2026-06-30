@@ -1,0 +1,42 @@
+html{ /* We don't want to use absolute size (https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) for properties users want to adjust for accessibility*/
+}
+/*Relative */
+/*percentage - relative unit that relative to parent element */
+/* rem - root em defined by the browser */
+/*em relative to the element itself  */
+/* ch determins character width based on 0 character size*/
+/* vh and vw is viewport hieght and viewport width*/
+/*scroll bar on bottom appears due to using vw includes the vertial scroll bar*/
+/*best practice use percentage instead*/
+
+/*user agent stylesheet is browser default*/
+/*CSS reset */
+* {
+  margin:0;
+  padding:0;
+  /* border-box ments the property width only fit the border,padding,and content within the width size */
+  box-sizing: border-box;
+}
+
+
+.container{
+  border-color: red black;
+  border-style: dashed dashed dashed dotted;
+  font-size: 1.5rem;
+  border-width: .5em .5em .5em 1em;
+  margin: 2em 1.5em 1.5em;
+  padding:1.5em 2em;
+  outline: 5px solid purple;
+  outline-offset: -30px;
+}
+.circle{
+  margin: 3rem auto;
+  background-color: blueviolet;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  outline: 2px solid #f00;
+  outline-offset: .25rem;
+}
+

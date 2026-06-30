@@ -1,0 +1,45 @@
+<!--Ctrl + A selects all code -->
+<!-- Variable is a container-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+      let variable1 = 3;
+      console.log(variable1+variable1);
+
+      const calculation = 2+2;
+      console.log(calculation);
+      console.log(calculation + 2);
+      if(variable1===3){
+        //const creates a new variable
+        const variable1=2;
+        console.log(`If True ${variable1}`);
+      }
+      console.log(`If False ${variable1}`);
+
+      const result = calculation + 2;
+      console.log(result);
+
+      const message = 'hello';
+      console.log(message); console.log(';');
+      //Reassigning value variable1 value
+      //can't create two variables with the same name
+      variable1 = 5;
+      console.log(variable1);
+      
+      variable1 = variable1 +1;
+      console.log(variable1); // value should be 6
+      //var means variable same as let but has issues so we don't use in newer code
+      var variable3 = 3;
+      console.log(typeof variable3);
+      console.log(typeof message);
+    </script>
+  </body>
+
+
+
+
+</html>

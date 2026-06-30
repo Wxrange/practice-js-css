@@ -1,0 +1,23 @@
+/*W3 CSS validation Service checking CSS*/
+/* specificy calculator gives level of specificty for a CSS selector */
+/* "*" universal selector only for css reset */
+/*DRY Don't Repeat Yourself */
+/* Inherated values typically only typogrophy properties*/
+/* The "!important" overriden don't use it */
+body {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: papayawhip;
+  color: darkblue; 
+}
+p{
+  /*https://coolors.co/bcf4f5-b4ebca-d9f2b4-d3fac7-ffb7c3*/
+  /*https://webaim.org/resources/contrastchecker/
+  */
+  /*rgba (red,green,blue, alpha a is transparency level*/
+  color: rgba(ff,0,0,0.5);
+  /*hsla (hue , saturation, lightness, alpha) */
+  /*Hex color  #ff0f0f*/
+  /* shortcut for rgb with the same value #333 */
+}

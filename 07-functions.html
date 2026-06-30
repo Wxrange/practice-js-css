@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      // Why use a function
+      // A function let's us reuse code
+      // function creates function 
+      //functionName(); calls the function
+      // function names can't use special words Example: function, can't start with a number, can't use special characters except: $_ 
+      //best practice use camelCase
+      
+      function function1 (){
+        console.log('hello');
+        console.log(2+2);
+      }
+      function greet(name){
+        if (name === undefined){
+          console.log(`hello there`);
+        } else{
+          console.log(`hello ${name}`);
+
+        }
+      }
+      greet();
+      greet('Bill');
+      greet('Jill');
+      function convertToFahrenheit(celsius){
+        fahrenheit = (celsius * 9 / 5) +32;
+        console.log(fahrenheit);
+        return fahrenheit;
+      }
+      convertToFahrenheit(25);
+      function convertToCelsius(fahrenheit){
+        celsius = (fahrenheit - 32) * 5 / 9;
+        console.log(celsius);
+        return celsius;
+      }
+      convertToCelsius(86);
+      function convertTemperature(degrees, unit){
+        if (unit === 'F'){
+          celsius = convertToCelsius(degrees);
+          return celsius + 'C';
+        } else if (unit === 'C') {
+          fahrenheit = convertToFahrenheit(degrees);
+          return fahrenheit + 'F';
+        }
+      }
+      function convertLength(length, from, to){
+        let suffix ='';
+        if (from === 'mile'){
+          if (to === 'km'){
+            length = ((length*1000) * (1.609*1000));
+            length = length /1000000;
+          } else if (to === 'ft'){
+            length = length * 5280;
+          } else{
+            return `Invalid unit to convert to ${to}`;
+          }
+        }else if (from === 'km'){
+          if (to === 'mile'){
+            length =  ((length*1000) * 621)/1000000;
+          } else if (to === 'ft'){
+            length =  (length*100) * 328084;
+            length = length/10000;
+          }else{
+            return `Invalid unit to convert to ${to}`;
+          }
+
+        } else if(from === 'ft'){
+          if (to === 'km'){
+            length =  ((length*100) / 328084)/10000;
+          } else if (to === 'mile'){
+            length =  length /5280;
+          } else{
+            return `Invalid unit to convert to ${to}`;
+          }
+        } else{
+          return `Invalid unit to convert from ${from}`;
+        }
+        if (length !== 0){
+          suffix = 's';
+        } else{
+          suffix = '';
+        }
+        return Math.ceil(length) + ' ' + to + suffix;
+      }
+      console.log(convertLength(50, 'mile','km'));
+      console.log(convertLength(32, 'km','mile'));
+      console.log(convertLength(50, 'km','km'));
+      console.log(convertLength(5,'km','ft'));
+      convertTemperature(25, 'C');
+      convertTemperature(86, 'F');
+    </script>
+  </body>
+</html>

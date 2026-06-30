@@ -1,0 +1,56 @@
+<!--Ctrl + A selects all code -->
+<!-- Variable is a container-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calulator</title>
+    <style>
+      /* Goal improve css
+      */
+      /*improve background color*/
+      button{
+        font-size: 2rem;
+        font-family: 'Courier New', Courier, monospace;
+        color:white;
+      }
+      .number{
+        background-color: gray;
+      }
+      .operator{
+        background-color: black;
+      }
+
+      /* improve font size and button size*/
+    </style>
+  </head>
+  <body>
+    <button class="number" onclick="updateCalculation('1')">1</button>
+    <button class="number" onclick="updateCalculation('2')">2</button>
+    <button class="number" onclick="updateCalculation('3')">3</button>
+    <button class="operator" onclick="updateCalculation(' + ')">+</button>
+    <button onclick="updateCalculation('=')">=</button>
+    <script>
+      // remove repeating operations and put into one function
+      let calculation ="";
+      function updateCalculation(character){
+        if (character === "="){
+          console.log(eval(calculation));
+          calculation = "";
+        } else {
+          calculation += character;
+          console.log(`${calculation}`);
+        }
+      }
+      let name = "Bill";
+      console.log(`My name is: ${name}`);
+      let cost = (1*5)+(2*3)+(1*9);
+      console.log(`Cost of food: ${cost}`);
+      let tax = cost * .1;
+      console.log(`Tax (10%) ${tax}`);
+    </script>
+  </body>
+
+
+
+
+</html>

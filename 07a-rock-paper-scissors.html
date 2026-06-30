@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans Game</title>
+  </head>
+  <body>
+    <h2>Rock Paper Sissors Game</h2>
+    <button onclick="playGame('rock')">Rock</button>
+    <button onclick="playGame('paper')">Paper</button>
+    <button onclick="playGame('scissors')
+      ">Scissors</button>
+    
+    <script>
+      //Strategy for Javascript
+      // First figure out the steps of the algorithm
+      // Build the algorithm
+      // following code line by line is called tracing the code
+      // Randomizes computer choice
+      function computerRandomChoice(){
+        let computerChoice = ''; 
+        let randomNumber = Math.random();
+        if(randomNumber >= 0 && randomNumber < 1/3){
+          computerChoice='rock';
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+          computerChoice='paper';
+        } else if (randomNumber >= 2/3) {
+          computerChoice='scissors';
+        }
+        // return value (or anything that results in a value)
+        // return will return undefined
+        // return statement ends function immediately
+        return computerChoice;
+      }
+      function playGame(userChoice){
+        const computerChoice = computerRandomChoice();
+        let result = '';
+        if(userChoice ==='rock'){
+          if(computerChoice === 'rock'){
+            result='You Tie.';
+          }else if(computerChoice === 'paper'){
+            result='You Lose.';
+          }else if(computerChoice === 'scissors'){
+            result='You Win.';
+          }
+          
+        } else if (userChoice === 'paper'){
+          if(computerChoice === 'rock'){
+            result='You Win.';
+          }else if(computerChoice === 'paper'){
+            result='You Tie.';
+          }else if(computerChoice === 'scissors'){
+            result='You Lose.';
+          } 
+          
+        } else if(userChoice === 'scissors'){
+          if(computerChoice === 'rock'){
+            result='You Lose.';
+          }else if(computerChoice === 'paper'){
+            result='You Win.';
+          }else if(computerChoice === 'scissors'){
+            result='You Tie.';
+          }
+           
+        }
+        
+        alert(`You picked ${userChoice}. Computer picked ${computerChoice}. ${result}`);
+      }
+    
+    </script>
+  </body>
+</html>

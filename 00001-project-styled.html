@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Registration</title>
+    <link rel="stylesheet" href="00001-project-styles.css">
+</head>
+  <body>
+    <div class="form-container">
+        <h2>Championship Registration</h2>
+        <p class="subtitle">Secure your spot in the upcoming seasonal bracket. Extra Text to test flexbox becuase in needs enough words to see the effects take place.</p>
+        <p class="plain">Secure your spot in the upcoming seasonal bracket. Extra Text to test flexbox as this is a plain text with no flex box</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="team-name">Team Name</label>
+                <input type="text" id="team-name" placeholder="Enter team name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="captain-email">Captain's Email</label>
+                <input type="email" id="captain-email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="game-title">Select Game</label>
+                <select id="game-title" required>
+                    <!--Comment put disabled on null/empty value dropdown options-->
+                    <option value="" disabled selected>Choose your title...</option>
+                    <option value="rl">Rocket League</option>
+                    <option value="tm">Trackmania</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Competitive Tier</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="tier" value="amateur" checked> Amateur
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="tier" value="pro"> Pro / Masters
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the tournament rules and guidelines.</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Register Team</button>
+        </form>
+    </div>
+  </body>
+</html>

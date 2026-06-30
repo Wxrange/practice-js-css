@@ -1,0 +1,10 @@
+/*Typography*/
+
+body{
+  padding:25%;
+  font-size:2rem;
+}
+input, button{
+  /*Becuase input and button don't automacticly inherit the font-size changes from body we need to tell css to inherit from the parent element*/
+  font-size:inherit;
+}

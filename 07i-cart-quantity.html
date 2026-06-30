@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <h2>Cart Quantity</h2>
+    <button onclick="showCartQuantity()">Show Quantity</button>
+    <button onclick="updateCartQuantity(1)">Add to Cart</button>
+    <button onclick="updateCartQuantity(-1)">Remove from Cart</button>
+    <button onclick="updateCartQuantity(2)">+2</button>
+    <button onclick="updateCartQuantity(3)">+3</button>
+    <button onclick="updateCartQuantity(4)">+4</button>
+    <button onclick="updateCartQuantity(5)">+5</button>
+    <button onclick="resetCartQuantity()">Reset Cart</button>
+    <script>
+      let cartQuantity = 0;
+      // if passing integer it causes referenceError 
+      function updateCartQuantity(quantity){
+        // if cart is full then alert and return
+        
+        if (cartQuantity+quantity > 10){
+          // is or would be 
+          alert("The cart is full");
+          return;
+        } 
+        // if cart is empty then alert and return
+        if (cartQuantity+quantity < 0){
+          alert(`Cart Quantity: ${cartQuantity} no items left`);
+          return;
+        } 
+        // if cart not empty or full and amount add or subtract isn't greater than full cart or less then empty then item quantity will be added or subtracted from total 
+        console.log(`Cart Quantity: ${cartQuantity +=quantity}`);
+      }
+      function showCartQuantity(){
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      }
+      function resetCartQuantity(){
+        console.log(`Cart Quantity: ${cartQuantity = 0}`);
+      }
+      //Const keeps code safer
+
+      const variable2 = 3;
+    </script>
+  </body>
+</html>

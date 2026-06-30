@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <p>current time</p>
+    <p id="timeText">Timezone</p>
+    <button onClick="displayTime()">Display time</button>
+    <form>
+      
+      <select>
+        <option>Select Timezone</option>
+      </select>
+    </form>
+    <script>
+      <!--parse string-->
+      const dJSONString = JSON.stringify(new Date());
+      const d = new Date();
+      const dString = d.toString();
+      function displayTime() {
+        console.log(dString);
+        console.log(dString.length);
+        console.log(typeof dString);
+        console.log(dString.charAt(1));
+      }
+      function displayTimezone(){
+        console.log(d)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+html{ /* We don't want to use absolute size (https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) for properties users want to adjust for accessibility*/
+}
+/*Relative */
+/*percentage - relative unit that relative to parent element */
+/* rem - root em defined by the browser */
+/*em relative to the element itself  */
+/* ch determins character width based on 0 character size*/
+/* vh and vw is viewport hieght and viewport width*/
+/*scroll bar on bottom appears due to using vw includes the vertial scroll bar*/
+/*best practice use percentage instead*/
+
+/*user agent stylesheet is browser default*/
+/*CSS reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{ /* meant a elements width will scale based on browser hieght*/
+  min-width: 100vh;
+}
+header{
+  width:50%;
+}
+h1{
+  border: 2px dashed red;
+  width: 50%;
+  font-size: 3rem;
+  padding:.5em; /*1.5rem*/
+}
+main{ 
+
+  font-size:2rem;
+  background-color: skyblue;
+
+}
+p{
+  font-size:2rem;
+  width: 40ch;
+}
+

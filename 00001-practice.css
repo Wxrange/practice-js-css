@@ -1,0 +1,39 @@
+/*W3 CSS validation Service checking CSS*/
+/* specificy calculator gives level of specificty for a CSS selector */
+/* "*" universal selector only for css reset */
+/*DRY Don't Repeat Yourself */
+/* Inherated values typically only typogrophy properties*/
+/* The "!important" overriden don't use it */
+body {
+  font-size: 22px;
+  border: 1px solid royalblue;
+}
+main{
+  font-family: monospace;
+}
+button, input, textarea, select{
+  font: inherit;
+}
+p{
+  /* Declarations 
+  propery : property value;*/
+  font-size: 22px;
+  color:purple;
+}
+
+/* selector list*/
+h1, h2{
+  color: red;
+}
+/* decendent combinator */
+h1 h2{
+ color:blue;
+}
+.tryout-summary{
+  color:black;
+}
+/*class selector*/
+.highlight {
+  text-transform: uppercase;
+  background-color: goldenrod;
+}

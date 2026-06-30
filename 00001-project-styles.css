@@ -1,0 +1,49 @@
+/* CSS comments */
+
+/* Layout and Centering */
+
+/* Key considerations with a form*/
+/* CSS Roadmap*/
+/* https://roadmap.sh/css */
+
+/* 1. Layout and centering */
+/* Descendant combinator */
+/* ul.my-things li {} selecting decendence of specific element */
+/* div form should be flex box*/
+/* Why a flex box what is the difference? */
+/*An important question to ask yourself when deciding between grid or flexbox is:
+Do we only need to control the layout by row or column? If yes, use flexbox.
+Do we need to control the layout by row and column? If yes, use grid layout.  */
+
+/* flexbox */ 
+/*flex-basis sets the initial main size of a flex item. */
+/* flex-grow specifies how much of the flex container's positive free space, if any, should be assigned to the flex item's main size.*/
+/*display: flex makes a element a flex container which is displayed as a block level content */
+/* display : INLINE FLEX is also possible*/
+/* flex-direction specifies which direction the main axis runs, default is row*/
+/* The flex model: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#the_flex_model */
+
+form {
+  width: 500px;
+  display: flex;
+  /*flex-flow is short hand to combine both flex-wrap and flex-direction*/
+  flex-wrap:wrap;
+  flex-direction: column;
+}
+/* > child combinator selector targets only the direct children of a parent element */
+form > div {
+  flex: 1 1 100px;
+  background-color: aquamarine;
+}
+form > div:nth-of-type(5) {
+  flex:3 3 100px;
+  background-color: aqua;
+}
+ /* p.plain is inside of divform*/
+p.plain{
+  display:block;
+}
+
+/* 2. Typography & Visual Hierarchy */
+/* 3. State & Interaction */
+/* 4. Accessibility & UX Feedback */

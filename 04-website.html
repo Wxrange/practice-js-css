@@ -1,0 +1,59 @@
+<!-- The CSS selectors module defines the patterns to select elements to which a set of CSS rules are then applied along with their specificity -->
+<!-- properies in {} are css styles-->
+<!-- value before :  is a property-->
+<!-- value after :  is a value-->
+<!-- attributes change the element behavior applied directly to element-->
+<!-- html structure DOCTYPE, html, head, body-->
+<!-- short cut shift tab to reverse tab-->
+<!-- wrap in settings for line wraping of code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buttons</title>
+    <style>
+      /* CSS comment */
+      button{ 
+        color:white;
+        border:none
+      }
+      .red-button {
+        background-color: red;
+        }
+      .yellow-button{
+        background-color: yellow;
+        color:black;
+      }
+      .orange-button{
+        background-color: orange;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <!--[attribute name] = "[attribute value]"-->
+    <button title="Good Job" class="red-button">Hello</button>
+    <hr>
+    <p>Paragraph<button class="yellow-button">Hello 2</button>text</p>
+    <p>Paragraph is a block level element</p>
+    <p>
+    multi space is not supported
+    </p>
+    <button Onclick='alert("added")' class="yellow-button">Add to cart</button>
+    <button class="orange-button"> Buy now
+    </button>
+    <script>
+      // JavaScript comment
+      /*
+      JavaScript
+      Multi-line comment
+      */
+      alert("hello");
+      console.log(2+2);
+      console.log("Welcome");
+    </script>
+  </body>
+
+
+
+
+</html>

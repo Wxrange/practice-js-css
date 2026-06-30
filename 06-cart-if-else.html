@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <h2>Cart Quantity</h2>
+    <button onclick="showCartQuantity()">Show Quantity</button>
+    <button onclick="addCartQuantity()">Add to Cart</button>
+    <button onclick="removeCartQuantity()">Remove from Cart</button>
+    <button onclick="twoPlusCartQuantity()">+2</button>
+    <button onclick="threePlusCartQuantity()">+3</button>
+    <button onclick="fourPlusCartQuantity()">+4</button>
+    <button onclick="fivePlusCartQuantity()">+5</button>
+    <button onclick="resetCartQuantity()">Reset Cart</button>
+    <script>
+      let cartQuantity = 0;
+      function showCartQuantity(){
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      }
+      function addCartQuantity(){
+        // variable += 1 is the same as variable = variable + 1 
+        //variable++ is the same as variable += 1
+        if (cartQuantity >= 10){
+          alert("Cart is Full");
+        }else{
+          console.log(`Cart Quantity: ${cartQuantity +=1}`);
+        }
+      }
+      function removeCartQuantity(){
+        if (cartQuantity == 0){
+          console.log(`Cart Quantity: ${cartQuantity} no items left`);
+        }else{
+          console.log(`Cart Quantity: ${cartQuantity-=1}`);
+
+        }
+      }
+      function twoPlusCartQuantity(){
+        if (cartQuantity >= 9){
+          alert("Cart is Full");
+        }else{
+          console.log(`Cart Quantity: ${cartQuantity+=2}`);
+        }
+        
+      }
+      function threePlusCartQuantity(){
+        if (cartQuantity >= 8){
+          alert("Cart is Full");
+        }else{
+          console.log(`Cart Quantity: ${cartQuantity+=3}`);
+        } 
+      }
+      function fourPlusCartQuantity(){
+        if (cartQuantity >= 7){
+          alert("Cart is Full");
+        }else{
+          console.log(`Cart Quantity: ${cartQuantity+=4}`);
+        }
+      }
+      function fivePlusCartQuantity(){
+        if (cartQuantity >= 6){
+          alert("Cart is Full");
+        }else{
+          console.log(`Cart Quantity: ${cartQuantity+=5}`);
+        }
+      }
+      function resetCartQuantity(){
+        console.log(`Cart Quantity: ${cartQuantity = 0}`);
+      }
+      //Const keeps code safer
+
+      const variable2 = 3;
+    </script>
+  </body>
+</html>

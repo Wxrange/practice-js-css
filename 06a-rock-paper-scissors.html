@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans Game</title>
+  </head>
+  <body>
+    <h2>Rock Paper Sissors Game</h2>
+    <button onclick="rock()">Rock</button>
+    <button onclick="paper()">Paper</button>
+    <button onclick="scissors()">Scissors</button>
+    <button onclick="resetGame()">Reset</button>
+    
+    <script>
+      //Strategy for Javascript
+      // First figure out the steps of the algorithm
+      // Build the algorithm
+      const max = 2;
+      const min = 0;
+      const choices = ['Rock','Paper','Scissors'];
+      let opponentChoice = choices[Math.floor(Math.random()*(max-min+1))+min];
+      
+      console.log(opponentChoice);
+      //reset functionality
+      let userChoice = '';
+      //Compares userChoice Rock to opponentChoice 
+      function rock(){
+        let randomNumber = Math.random();
+        let computerChoice = '';
+        const userChoiceAlt = 'rock';
+        let result = '';
+        userChoice = choices[0];
+        if(opponentChoice === userChoice){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Tied");
+        } else if (opponentChoice ==='Scissors'){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Win");
+        } else if(opponentChoice ==='Paper'){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Lose");
+        }
+        //Alternative algorithm
+        if(randomNumber >= 0 && randomNumber < 1/3){
+          computerChoice='rock';
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+          computerChoice='paper';
+        } else if (randomNumber >= 2/3) {
+          computerChoice='scissors';
+        }
+
+        if(computerChoice === 'rock'){
+          result='You Tie';
+        }else if(computerChoice === 'paper'){
+          result='You Lose';
+        }else if(computerChoice === 'scissors'){
+          result='You Win';
+        }
+        alert(`You picked ${userChoiceAlt}. Computer picked ${computerChoice}. ${result}`);
+      }
+        //Compares userChoice paper to opponentChoice 
+      function paper(){
+        let randomNumber = Math.random();
+        let computerChoice = '';
+        const userChoiceAlt = 'paper';
+        let result = '';
+        userChoice = choices[1];
+        if(opponentChoice === 'Rock'){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Win");
+        } else if (opponentChoice ==='Scissors'){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Lose");
+        } else if(opponentChoice === userChoice){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Tied");
+        }
+        //Alternative algorithm
+        if(randomNumber >= 0 && randomNumber < 1/3){
+          computerChoice='rock';
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+          computerChoice='paper';
+        } else if (randomNumber >= 2/3) {
+          computerChoice='scissors';
+        }
+
+        if(computerChoice === 'rock'){
+          result='You Win';
+        }else if(computerChoice === 'paper'){
+          result='You Tie';
+        }else if(computerChoice === 'scissors'){
+          result='You Lose';
+        }
+        alert(`You picked ${userChoiceAlt}. Computer picked ${computerChoice}. ${result}`);
+      }
+        //Compares userChoice scissors to opponentChoice 
+      function scissors(){
+        let randomNumber = Math.random();
+        let computerChoice = '';
+        const userChoiceAlt = 'scissors';
+        let result = '';
+        userChoice = choices[2];
+        if(opponentChoice === 'Rock'){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Lose");
+        } else if(opponentChoice === userChoice){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Tied");
+        } else if(opponentChoice ==='Paper'){
+          console.log(`${userChoice} ${opponentChoice}`);
+          alert("You Win");
+        }
+        //Alternative algorithm
+        if(randomNumber >= 0 && randomNumber < 1/3){
+          computerChoice='rock';
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+          computerChoice='paper';
+        } else if (randomNumber >= 2/3) {
+          computerChoice='scissors';
+        }
+
+        if(computerChoice === 'rock'){
+          result='You Lose';
+        }else if(computerChoice === 'paper'){
+          result='You Win';
+        }else if(computerChoice === 'scissors'){
+          result='You Tie';
+        }
+        alert(`You picked ${userChoiceAlt}. Computer picked ${computerChoice}. ${result}`);
+      }
+      //clears userChoice and rerandomizes opponentChoice
+      function resetGame(){
+        
+        userChoice = '';
+        opponentChoice = choices[Math.floor(Math.random()*(max-min+1))+min];
+        console.log(`${userChoice} ${opponentChoice}`)
+      }
+    </script>
+  </body>
+</html>
