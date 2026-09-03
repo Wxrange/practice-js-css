@@ -1,0 +1,32 @@
+/*Typography*/
+/*IMPORTANT LINK "https://github.com/gitdagray/css_course" a*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  padding:25%;
+  font-size:2rem;
+  /*font family*/
+  /*Serif, Sans-serif, monospace(evenspace for every character),cursive, fantasy */
+  /* font with space needs quotes*/
+  /*a list of fonts like this "'Courier New', Courier, monospace" is called a font stack*/
+  font-family: "Roboto", sans-serif;
+
+}
+a{
+  text-decoration: none;
+  cursor:pointer; /*cursor has different values*/
+  color:hsl(39, 100%, 50%);
+}
+/*puedo class  Class:status of class*/
+/* puesdo classes needed to be ordered properly or the styling will be not overriden*/
+/*HSL is more modern choice for custmization*/
+a:visited{
+  color: hsl(39, 100%, 36%);
+}
+a:hover, a:focus{
+  color:hsl(39, 100%, 71%); 
+  background-color: hsl(300, 100%, 25%);
+  
+}
+a:active{
+  color:hsla(39, 100%, 22%, 0.603);
+}
