@@ -4,104 +4,40 @@
     <title>Objects</title>
   </head>
   <body>
+    <script>
+      const product = {
+        // "name" is the property
+        // 'socks' is the value
+        // property value pairs are seperated with a comman
+        name: 'socks',
+        price: 4.99,
+        count:4,
     
-    
+      };
+      
+      console.log(product);
+      console.log(product.price);
+      console.count(product);
+      console.count(product);
+      // Reassigning object values
+      // "product.name" DOT notation
+      product.name = 'cotten socks';
+      product.price = '6.59';
+      product.count = '8';
+      console.log(product);
+      //Adding a object property value pair
+      product.taxesProduct = .05;
+      console.log(product.taxesProduct);
+      //Removing a object property value pair
+      delete product.taxesProduct;
+      console.log(product.taxesProduct);
+
+      // Objects let us group multiple value together
+      // Objects let us use multiple values together
+
+      
+
+      
+    </script>
   </body>
-  <script>
-    // objects can group multiple values together
-    // object can use multiple values together
-    // why we use objects is to make our code more organized, reduce the use of variables
-    // inside a object any value type can save any type of value
-    // propery : value pair
-    /*
-    const product = {
-      name: 'socks',
-      price: '1090',
-    }; //product is object
-    console.log(typeof product);
-    // value of product property
-    // DOT NOTATION for accessing propreties
-    console.log(product.name);
-    console.log(product.price);
-    // change object property value
-    product.name = 'cotten socks';
-    console.log(product);
-    // add new property
-    product.newProperty = true;
-    console.log(product.newProperty);
-    // delete object property
-    delete product.newProperty;
-    console.log(product);
-    */
-  // BRACKET NOTATION
-  // let us use poporoeites that don't work with dot notation
-  // any property name using -, variables, functions, as long as it results in a value it can be accessed using bracket notation
-
-  // when to use bracket notation?
-  // use dot notation by default unless bracket notation is needed
-  //  const product2 = {
-  //  name: 'shirt',
-  //    'delivery-time': '1 day',
-  //    // nested object
-  //    rating : {
-  //      stars: 4.5,
-  //      count: 87
-  //    },
-  //    // function as a property called a method
-  //    fun: function function1 (){
-  //      console.log('function inside object');
-  //    }
-  //  }
-  //  console.log(product2);
-  //  console.log(product2.name);
-  //  console.log(product2['name']);
-  // any property name using -, variables, functions, as long as it results in a value it can be accessed using bracket notation
-  // if using string the proprety doesn't need to be defined with brackets around it
-  //  console.log(product2['delivery-time']);
-  //  console.log(product2.rating.count);
-  //  product2.fun();
-  // Method examples
-  //  console.log(typeof console.log);
-  //  console.log(typeof Math.random);
-  
-  //Built-in Objects are provided by the langauge
-  //JSON is more UNIVSERSAL then javascript OBJECT SYNTAX
-  //JSON doesn't support functions or single quotes
-  //JSON used when we send data between computer when we store data
-  //convert object to JSON format as a string
-  //  console.log(JSON.stringify(product2));
-  //  console.log(typeof JSON.stringify(product2)); //string
-  //  const jsonString = JSON.stringify(product2);e
-  //Parsing JSON
-  //  console.log(JSON.parse(jsonString));
-  //Built-In Object localStorage
-  //save values more permanently
-  // Variables are Temporary / once refresh or close page all the variables are deleted
-  
-  //Falsy Values
-  // false, 0,  '', NaN, undefined, null 
-  // null = intentionally want something to be empty and will be stored value of null
-  // undefined = unintentionally empty and will look for default value to be stored instead
-  // null vs undefined
-
-  //AUTO BOXING
-  // values can have properties
-  // javascript automaticly wraps values with allow the use of properties on them
-  //not with null and undefined
-  // For example strings
-
-  //O(n) time complexity
-  console.log('hello'.length);
-  console.log('hello'.toUpperCase());
-
-  //Objects are references
-  // Value is actually just points to the location the value is stored in the computer
-  const object1 = {
-    message: 'hello'
-  };
-  // points only to reference of the value which reuses the same value.
-  const object2 = object1;
-
-  
-  </script>
 </html>

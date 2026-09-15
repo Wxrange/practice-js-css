@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Rock Paper Sissors</title>
+  </head>
+  <body>
+    <button onclick={playGame()}>Rock</button>
+    <button onclick={playGame()}>Paper</button>
+    <button onclick={playGame()} >Sissors</button>
+    <script>
+      // Generate Random Computer Guess
+      function computerChoice(){
+        let randomNumber = Math.random();
+        if (randomNumber < 1/3){
+          return 'rock';
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+          return 'paper';
+        } else if (randomNumber >= 2/3){
+          return 'sissors';
+        }
+      }
+      // Rock Guess (if else statment comparison, console.log result)
+      //using camelCase for functions
+      // O(n) Time Complexity
+      // O(1) Space Complexity
+      function playGame(){
+        let computerGuess = computerChoice();
+        if(computerGuess === 'rock'){
+          console.log('You Tied');        
+        } else if(computerGuess ===  'paper' ){
+          console.log('You Lose');
+        } else if(computerGuess === 'sissors'){
+          console.log('You Win');
+        } else {
+          console.log(computerGuess);
+        }
+    
+      // Paper Guess (if else statment comparison, consol.log result)
+        if(computerGuess === 'paper'){
+          console.log('You Tied');          
+        } else if(computerGuess === 'sissors'){
+          console.log('You Lose');
+        } else if(computerGuess === 'rock'){
+          console.log('You Win');
+        } else {
+          console.log(computerGuess);
+          
+        }
+
+
+      // Sissors Guess (if else statment comparison, consol.log result)
+        if(computerGuess === 'sissors'){
+          console.log('You Tied');
+        } else if(computerGuess === 'rock'){
+          console.log('You Lose');
+        } else if(computerGuess ===  'paper'){
+          console.log('You Win');
+        } else {
+          console.log(computerGuess);
+          
+        }
+        
+        //alert
+      }
+      
+
+
+    </script>
+  </body>
+</html>
