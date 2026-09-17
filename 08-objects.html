@@ -5,6 +5,7 @@
   </head>
   <body>
     <script>
+      /*
       const product = {
         // "name" is the property
         // 'socks' is the value
@@ -35,9 +36,116 @@
       // Objects let us group multiple value together
       // Objects let us use multiple values together
 
-      
 
+
+      */
+      /*
+      // Accessing object using bracket notation
+      // let's us use properties  that don't work with dot notation
+      // objects can 
+      const product2 ={
+        name: 'shirt',
+        'delievery-time': '1 day',
+        rating:{
+          stars: 4.5,
+          count: 87,
+
+        },
+        fun: function function1(){
+          console.log('function inside object');
+        }
+
+      }
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      // Properties that use operator symbols require the use of bracket notation to access property
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.count);
+      product2.fun();
+
+      // JSON => JavaScript Object
+      // Used to send data between computers using differnt code
+      // Used when we stored data
+      // JSON doesn't support functions
+      console.log(JSON.stringify(product2));
+      const jsonString = JSON.stringify(product2);
+      // Converts a stringified object for JSON back to a non-stringfied object
+      //Only converts convertable forms of data to strings
+      console.log(JSON.parse(jsonString));
+      // Variables are temporary
       
+      //(Gemini AI*)Alloaction: memory space is serverd for the variagble when javascript engine enters its block scope
+      //(Gemini AI*)Deallocation: as soon as execution leaves that block, the variable falls out of scope and garbage collector flags memory to be freed
+      // (Gemini AI*)Session Storage 
+      // (Gemini AI*)Local Storage / Cookies (User preferance, authorization tokens)(Indefinite until explicity cleared)
+      // (Gemini AI*)Databases (Permanenet)
+      // (Gemini AI*)Object Storage (Permanent)
+      */
+      
+      //Auto boxing
+      //javaScript has a feature called autoboxeing 
+      // Autoboxing automaticly wraps the string in a special object first with the properties like length
+      //Autoboxing doesn't work with null or undefined
+      // other values have properties and methods
+      //length property
+      console.log('hello'.length);
+      //toUpperCase() Method
+      console.log('hello'.toUpperCase());
+      const object1 ={
+        message: 'hello'
+      }
+      const object2 = object1;
+      object1.message = 'Good Shit';
+      console.log(object1);
+      const object3 ={
+        message: 'Good Shit'
+      };
+      //compares the references not the values
+      console.log(object3 === object1); // reference different address (false)
+      console.log(object2 === object1); //reference same address (true)
+
+      //object stores a reference of the value that points to the object value. not the actual object.
+      //Copy by references
+      //const really prevents the reference property (address) from changing
+      const object4 = {
+          message: 'Good Job',
+          price: 4.99
+      }  
+      // Destructuring (shortcut) takes propery out of object and stores it in a variable of the same name.
+      const message = object4.message;
+      // const { message } = object4;
+      // console.log(message);
+      /* 
+      const {message, price} = object4;
+      console.log(message,price);
+      */
+
+      // Shorthand property
+      const object5 = {
+        // The message : message (this comes from the const destructuring)
+        message: message,
+        //Short hand property (shortcut to the above)
+        message,
+        method: function function1(){
+          console.log('method');
+        } ,
+        // Shortcut to above
+        method1() {
+          console.log('method');
+        }
+      };
+      console.log(object5);
+      // runs method
+      object5.method();
+      // runs shortcut method1
+      object5.method1();
+
+
+
+
+
+
     </script>
   </body>
 </html>
