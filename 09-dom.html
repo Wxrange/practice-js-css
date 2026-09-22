@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button >Hello</button>
+    <button class="js-button">Second Button</button>
+    <script>
+      //Document Object Model
+      
+      
+      //Objects vs Arrays
+      //https://medium.com/@zac_heisey/objects-vs-arrays-42601ff79421
+      //Objects Represent a thing in the code. Person, Car, or Building that can be defined by a set of characteristics.
+      //Arrays crate and store a list of multiple items in a ordered collection to be access by numerical position in the list.
+      
+      //Built-in Objects
+      // console, Math, JSON, localStorage
+      //DOM another built-in object 
+      /*
+      //Removes all other HTML and replaces it with assigned value to the HTML
+      
+      document.body.innerHTML = 'hello';
+      document.title = 'Good job!';
+      */
+      //document as both properties and methods
+      /*
+      console.log(document.title); //prints DOM
+      document.title = 'Changed'; //Changes the html title
+      console.log(document.body); // prints the body html element
+
+      // document allow for JavaScript to contain HTML elements
+      // When HTML element is inside JavaScript it is converted into a JavaScript object
+      console.log(typeof document.body); // prints object
+      // innerHTML propery of body
+      // Controls all HTML inside the element property selected
+      document.body.innerHTML = '<button>Good job!</button>';
+      */
+
+      //document.querySelector() allows us to get any element from the page and put it inside JavaScript
+      //it will get the first instance of button
+
+      /*
+      console.log(document.querySelector('button').innerHTML); // prints Hello
+      //For Readability drop down and indent the innerHTML property
+      document.querySelector('button')
+        .innerHTML = 'Changed';
+      // '.' starting with a dot it will select based on class
+      console.log(document.querySelector('.js-button')); // Prints second button element
+      */
+    
+      // BEST PRACTICE use element name then follow it by Element so programmers are aware that it's meant to be a element
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+      
+
+    </script>
+  </body>
+</html>

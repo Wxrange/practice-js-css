@@ -1,0 +1,50 @@
+<!--Ctrl + A selects all code -->
+<!-- Variable is a container-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calulator</title>
+    <style>
+      /* Goal improve css
+      */
+      /*improve background color*/
+      button{
+        font-size: 2rem;
+        font-family: 'Courier New', Courier, monospace;
+        color:white;
+      }
+      .number{
+        background-color: gray;
+      }
+      .operator{
+        background-color: black;
+      }
+
+      /* improve font size and button size*/
+    </style>
+  </head>
+  <body>
+    <button class="number" onclick="updateCalculation('1')">1</button>
+    <button class="number" onclick="updateCalculation('2')">2</button>
+    <button class="number" onclick="updateCalculation('3')">3</button>
+    <button class="operator" onclick="updateCalculation(' + ')">+</button>
+    <button onclick="updateCalculation('=')">=</button>
+    <script>
+      // Remove repeating operations and put into one function
+      let calculation = JSON.parse(localStorage.getItem('calculation')) || '';
+      //TODO getItem() calculation, defualt value if calculation doesn't exist
+
+      function updateCalculation(character){
+        if (character === "="){
+          console.log(eval(calculation));
+          calculation = "";
+        } else {
+          calculation += character;
+          console.log(`${calculation}`);
+          localStorage.setItem('calculation', JSON.stringify(calculation));
+        }
+      }
+    
+    </script>
+  </body>
+</html>
