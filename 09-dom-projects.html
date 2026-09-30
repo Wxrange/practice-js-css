@@ -5,7 +5,31 @@
     <title>DOM</title>
   </head>
   <body>
+    <p>YouTube Subscribe Button</p>
+     <!-- Don't forget the . for geting a class-->
+    <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button>
+
     <script>
+      // paragraph for header text
+      // button for subscription
+      // as well as space between each html element
+      // functionality to change between subscribed and subscribe
+      function subscribe(){
+        const subscribeButton = document.querySelector('button');
+        console.log(subscribeButton.innerHTML);
+        if (subscribeButton.innerText === "Subscribe") {
+          subscribeButton.innerHTML = "Subscribed";
+        } else{
+          subscribeButton.innerHTML = "Subscribe";
+        }
+      }
+      // Need a link to rock paper sissors game
+      // Need paragraph for game title header
+      // Need buton for rock, paper, and sicssors
+      // Need computer random choice
+      // Need to save wins, loses, and ties in scoreboard
+      // Need to show the results for each game with paragraph and choices you and the computer made with another paragraph 
+      // Need a button for resetting score
       
     </script>
   </body>
