@@ -6,10 +6,37 @@
   </head>
   <body>
     <p>YouTube Subscribe Button</p>
-     <!-- Don't forget the . for geting a class-->
+    <!-- Don't forget the . for geting a class-->
     <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button>
-
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 have $10 shipping cost</p>
+    <p>Orders over $40 have free shipping</p>
+    <!-- onkeydown attribute executes what is inside it when you press eneter-->
+     <!--Every event listener gets a event object containing pSroperties such as key-->
+    <input  class="order-cost-input" type="text" placeholder="order cost USD " onkeydown="handleCostKeydown(event.key)">
+    
+    <button class="order-cost-btn"
+    onclick="orderCost()">Calculate</button>
+    <p class="order-total-cost"></p>
     <script>
+      //Introduction to DOM 
+
+      // number to string conversion
+      console.log(String(43));
+      // if string only contains a number and we use the operators - * or / then it will be converted to a number (NOT for +)
+      //convert string to number before applying arithemetic
+      console.log('34'+ 5);
+
+      // Window object ( represents the browser )
+      // has access to the document
+      // has access to the console
+      // has access to pop ups
+      // we don't need window. as js adds it for us automatically
+      window.document
+      window.console.log('window');
+      window.alert
+      //
+
       // paragraph for header text
       // button for subscription
       // as well as space between each html element
@@ -23,14 +50,42 @@
           subscribeButton.innerHTML = "Subscribe";
         }
       }
-      // Need a link to rock paper sissors game
-      // Need paragraph for game title header
-      // Need buton for rock, paper, and sicssors
-      // Need computer random choice
-      // Need to save wins, loses, and ties in scoreboard
-      // Need to show the results for each game with paragraph and choices you and the computer made with another paragraph 
-      // Need a button for resetting score
+      // rock paper sissors game using DOM JavaScript
+      // 09-rock-paper-scissors.html
       
+      // Amazon shippping calculator
+      // Need a paragraph to display shipping cost for orders under and over $40
+      // need a input textbox for cost to be inputted to calculate total order cost
+      //need a button on click runs a function that calculates the total cost of the order
+      //need a function to calculate the total cost
+      //need a paragraph to dispaly the total cost
+      function orderCost(){
+        const costInputElement = document.querySelector('.order-cost-input');
+        console.log(costInputElement);
+        const costParagraphElement = document.querySelector('.order-total-cost');
+        
+        //for input elements store the value in the property called value 
+        // defualt value is type string to convert to number we need to use the built-in Number() function
+        let cost = Number(costInputElement.value);
+        console.log(cost);
+        console.log(typeof cost);
+
+        if (cost < 40){
+          cost += 10;
+          costParagraphElement
+          .innerHTML = `$${cost}` ;
+        } else if (cost >= 40) {
+          costParagraphElement
+          .innerHTML = `$${cost}` ;
+        }
+
+      }
+      function handleCostKeydown(keyPressed){
+        console.log(keyPressed);
+        if (keyPressed === 'Enter'){
+          orderCost()
+        } 
+      }
     </script>
   </body>
 </html>
